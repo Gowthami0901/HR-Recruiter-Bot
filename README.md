@@ -1,11 +1,40 @@
 # HR-Recruiter-Bot
 
-## Building AI-Driven WhatsApp Bots with Python
+
+## Table of Contents
+
+- [Build AI WhatsApp Bots with Python](#build-ai-whatsapp-bots-with-python)
+  - [Prerequisites](#prerequisites)
+  - [Get Started](#get-started)
+  - [Step 1: Select Phone Numbers](#Step-1-select-phone-numbers)
+  - [Step 2: Send Messages with the API](#Step-2-send-messages-with-the-api)
+  - [Step 3: Configure Webhooks to Receive Messages](#Step-3-configure-webhooks-to-receive-messages)
+      - [Start your app](#start-your-app)
+      - [Launch ngrok](#launch-ngrok)
+      - [Integrate WhatsApp](#integrate-whatsapp)
+      - [Testing the Integration](#testing-the-integration)
+  - [Step 4: Understanding Webhook Security](#step-4-understanding-webhook-security)
+  - [Step 5: Learn about the API and Build Your App](#Step-5-learn-about-the-api-and-build-your-app)
+  - [Step 6: Integrate AI into the Application](#Step-6-integrate-ai-into-the-application)
+  - [Step 7: Add a Phone Number](#Step-7-add-a-phone-number)
+- [Setup for BlandAI Call Integration](#Setup-for-BlandAI-Call-Integration)
+  - [Setting Up WhatsApp API](#Setting-Up-WhatsApp-API)
+  - [Setting Up BlandAI for Calls](#Setting-Up-BlandAI-for-Calls)
+  - [Integration with MongoDB](#Integration-with-MongoDB)
+  - [Scheduling-Interviews-and-Managing-Candidate-Status](#Scheduling Interviews and Managing Candidate Status)
+  - [Troubleshooting and Error Handling](#Troubleshooting-and-Error-Handling)
+  - [Best Practices](#Best-Practices)
+
+
+
+
+
+# build-ai-whatsapp-bots-with-python
 
 In this guide, you'll learn how to create a WhatsApp bot using the Meta (formerly Facebook) Cloud API, leveraging Python and Flask. We’ll also cover how to set up webhooks to receive real-time messages and integrate OpenAI for AI-generated responses. For detailed information on setting up the Flask application, refer to the provided documentation.
+<br>
 
-
-## Prerequisites
+# prerequisites
 
 Before you start, ensure you have the following:
 
@@ -14,9 +43,9 @@ Before you start, ensure you have the following:
 2. **Business Application**: If you don't have one, you can [learn to create a business app here](https://developers.facebook.com/docs/development/create-an-app/). If you don't see an option to create a business app, select **Other** > **Next** > **Business**.
 
 3. **Python Knowledge**: Basic understanding of Python is necessary to follow along with this tutorial.
+<br>
 
-
-## Note
+# get-started
 
 1. **Getting Started**: Kick off your setup [here](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started).
 
@@ -27,9 +56,9 @@ Before you start, ensure you have the following:
 4. **Python Messaging Guide**: Follow this [step-by-step Python guide](https://developers.facebook.com/blog/post/2022/10/24/sending-messages-with-whatsapp-in-your-python-applications/) for sending messages.
 
 5. **Message Sending API Documentation**: Explore the [API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages) for sending messages.
+<br>
 
-
-## Step 1: Choose Phone Numbers
+## Step-1-select-phone-numbers
 
 - Ensure that WhatsApp has been integrated into your app.
 - Start with a test number that allows you to send messages to up to 5 different numbers.
@@ -39,7 +68,7 @@ Before you start, ensure you have the following:
 <br>
 
 
-## Step 2: Sending Messages via the API
+## Step-2-send-messages-with-the-api
 
 1. Obtain a temporary 24-hour access token from the API access section.
 2. You'll be provided with an example `curl` command for sending messages, which you can execute from the terminal or using a tool like Postman.
@@ -68,16 +97,17 @@ Next, locate the following details on the **App Dashboard**:
 - **ACCESS_TOKEN**: "<YOUR-SYSTEM-USER-ACCESS-TOKEN>" (Obtained in the previous step)
 
 > Please note that you must send a template message as your initial communication with a user. Hence, you need to send a reply before proceeding. This took me a while to figure out.
+<br>
 
 
-## Step 3: Setting Up Webhooks to Receive Messages
+## Step-3-configure-webhooks-to-receive-messages
 
-## Start Your Application
+## start-your-app
 - Ensure you have Python installed and set up, then install the required dependencies: `pip install -r requirements.txt`.
 - Launch your Flask application locally by running [main.py](https://github.com/Gowthami0901/HR-Recruiter-Bot/tree/main).
 
 
-## Launch ngrok
+## Launch-ngrok
 
 The following steps are based on the [ngrok documentation](https://ngrok.com/docs/integrations/whatsapp/webhooks/).
 
@@ -97,7 +127,8 @@ Once your app is running locally, you'll need to expose it to the internet secur
 8. ngrok will provide a URL that exposes your localhost application to the internet (copy this URL for use with Meta).
 
 
-## Connect WhatsApp
+## integrate-whatsapp
+
 
 In the Meta App Dashboard, navigate to WhatsApp > Configuration and click Edit.
 
@@ -114,7 +145,7 @@ In the Meta App Dashboard, navigate to WhatsApp > Configuration and click Edit.
 6. With your Flask app and ngrok running, you can click "Test" next to messages to verify the subscription. You should receive a test message in uppercase. If so, your webhook setup is correct.
 
 
-## Testing the Integration
+## testing-the-integration
 
 Use the phone number associated with your WhatsApp product or the test number you used earlier.
 
@@ -123,8 +154,10 @@ Use the phone number associated with your WhatsApp product or the test number yo
 3. Check if the bot replies in uppercase.
 4. You've successfully integrated the bot.
 5. Now, you can start developing more advanced features.
+<br>
 
-## Step 4: Understanding Webhook Security
+
+## step-4-understanding-webhook-security
 
 **Verification Requests**
 
@@ -149,15 +182,15 @@ The `verify_token` (e.g., `12345 or hello`) is a string you choose. It should be
 When your endpoint receives a verification request, it must:
 - Check that the `hub.verify_token` matches the string you configured in the Verify Token field of the Webhooks setup.
 - Respond with the `hub.challenge` value.
+<br>
 
-
-
-## Step 5: Explore the API and Build Your Application
+## Step-5-learn-about-the-api-and-build-your-app
 
 Review the developer documentation to learn more about building your app and sending messages. [Access the documentation](https://developers.facebook.com/docs/whatsapp/cloud-api).
+<br>
 
 
-## Step 6: Integrate AI into Your Bot
+## Step-6-integrate-ai-into-the-application
 
 With the connection established, you can enhance your bot's capabilities beyond just uppercase responses. 
 
@@ -171,9 +204,10 @@ Here’s how you can set up and integrate AI into your WhatsApp bot using the wh
     - Defines a prompt template for generating HR-related responses based on context and user input.
 
 - [whatsapp_bot](https://github.com/Gowthami0901/HR-Recruiter-Bot/blob/main/whatsapp_bot.py): Import the 'generate_response' function into 'whatsapp_bot.py'. Update 'process_whatsapp_message()' to use the 'generate_response()' function, enabling your bot to generate dynamic responses based on user input and context.
+<br>
 
 
-## Step 7: Add a Phone Number
+## Step-7-add-a-phone-number
 
 For production use, you need to add your own phone number to send messages to your users.
 
@@ -194,13 +228,14 @@ For experimenting without affecting your personal number, consider these options
 6. Dedicated Devices for Development
 
 **Recommendation**: For long-term or professional use, consider using a virtual phone number service or purchasing a new SIM card for a dedicated device. For quick testing, a temporary number might be sufficient, but be mindful of security and privacy. Remember, once a number is associated with WhatsApp Business API, it cannot be used with regular WhatsApp on a device unless you deactivate it from the Business API and reverify it on the device.
+<br>
 
 
+# **Setup-for-BlandAI-Call-Integration**
 
-## **Setup for BlandAI Call Integration**
 
-## **1. Setting Up WhatsApp API**
-
+## **1.Setting-Up-WhatsApp-API**
+ 
 **Step 1: Create a WhatsApp Business Account**
 - **Visit**: [WhatsApp Business](https://www.whatsapp.com/business/)
 - **Follow**: The instructions to create a business account.
@@ -239,7 +274,7 @@ For experimenting without affecting your personal number, consider these options
   ```
 
 
-## **2. Setting Up BlandAI for Calls**
+## **2.Setting-Up-BlandAI-for-Calls**
 
 **Step 1: Create a BlandAI Account**
 - **Visit**: [BlandAI](https://bland.ai/)
@@ -289,8 +324,8 @@ For experimenting without affecting your personal number, consider these options
 - **Store**: The call details and update the candidate's status in MongoDB.
 
 
-## **3. Integration with MongoDB**
-
+## **3.Integration-with-MongoDB**
+ 
 **Step 1: Connect to MongoDB**
 - **Connection String**: `mongodb://localhost:27017/`
 - **Python Code Example**:
@@ -301,13 +336,9 @@ For experimenting without affecting your personal number, consider these options
   ```
 
 
-## **4. Scheduling Interviews and Managing Candidate Status**
-
-## Overview
-
+## **4.Scheduling-Interviews-and-Managing-Candidate-Status**
+  
 This below steps outlines the process for scheduling interviews, updating candidate statuses, and handling call details using a Streamlit application integrated with MongoDB and various APIs.
-
-## Steps
 
 **Step 1: Determine Interest from Call Transcript**
 
@@ -577,10 +608,11 @@ Call ID not found in response for candidate ID: {candidate['ID']}")
 
 
 The process involves determining candidate interest based on call transcripts, updating candidate statuses in MongoDB, and scheduling interviews with integrated messaging and calling functionalities. Each step ensures that candidates are properly managed and communicated with, leveraging various APIs and MongoDB for data handling.
+<br>
 
 
-## **5. Troubleshooting and Error Handling**
-
+# **5.Troubleshooting-and-Error-Handling**
+  
 **WhatsApp API Errors**
 - **HTTP Errors**: Check status codes and messages.
 - **Retries**: Implement retry logic for network issues.
@@ -588,9 +620,10 @@ The process involves determining candidate interest based on call transcripts, u
 **BlandAI Call Errors**
 - **Status Checks**: Ensure the call is completed before fetching details.
 - **Error Logs**: Capture and log errors for debugging.
+<br>
 
 
-## **6. Best Practices**
+# **6.Best-Practices**
 
 - **Secure API Keys**: Do not hardcode keys; use environment variables or secure vaults.
 - **Monitor Usage**: Keep track of API usage to avoid exceeding limits.

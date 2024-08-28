@@ -21,9 +21,9 @@
   - [Setting Up WhatsApp API](#Setting-Up-WhatsApp-API)
   - [Setting Up BlandAI for Calls](#Setting-Up-BlandAI-for-Calls)
   - [Integration with MongoDB](#Integration-with-MongoDB)
-  - [Scheduling-Interviews-and-Managing-Candidate-Status](#Scheduling Interviews and Managing Candidate Status)
-  - [Troubleshooting and Error Handling](#Troubleshooting-and-Error-Handling)
-  - [Best Practices](#Best-Practices)
+  - [Scheduling Interviews and Managing Candidate Status](#Scheduling-Interviews-and-Managing-Candidate-Status)
+- [Troubleshooting and Error Handling](#Troubleshooting-and-Error-Handling)
+- [Best Practices](#Best-Practices)
 
 
 

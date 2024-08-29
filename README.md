@@ -8,7 +8,7 @@
   - [Step 1: Select Phone Numbers](#Step-1-select-phone-numbers)
   - [Step 2: Send Messages with the API](#Step-2-send-messages-with-the-api)
   - [Step 3: Configure Webhooks to Receive Messages](#Step-3-configure-webhooks-to-receive-messages)
-      - [Start your app](#start-your-app)
+      - [Start your application](#start-your-application)
       - [Launch ngrok](#launch-ngrok)
       - [Integrate WhatsApp](#integrate-whatsapp)
       - [Testing the Integration](#testing-the-integration)

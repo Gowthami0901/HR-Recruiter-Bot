@@ -101,7 +101,7 @@ Next, locate the following details on the **App Dashboard**:
 
 ## Step-3-configure-webhooks-to-receive-messages
 
-## start-your-app
+## Start-your-application
 - Ensure you have Python installed and set up, then install the required dependencies: `pip install -r requirements.txt`.
 - Launch your Flask application locally by running [main.py](https://github.com/Gowthami0901/HR-Recruiter-Bot/tree/main).
 

@@ -80,8 +80,8 @@ To create an access token that lasts longer than 24 hours:
 
 1. Create a [system user at the Meta Business account level](https://business.facebook.com/settings/system-users).
 2. On the System Users page, assign full control of your WhatsApp app to the system user and click Save Changes.
-   - [Refer to step 1 here](https://github.com/daveebbelaar/python-whatsapp-bot/blob/main/img/meta-business-system-user-token.png)
-   - [Refer to step 2 here](https://github.com/daveebbelaar/python-whatsapp-bot/blob/main/img/adding-assets-to-system-user.png)
+   - [Refer to step 1 here](https://github.com/Gowthami0901/HR-Recruiter-Bot/blob/main/meta-business-system-user-token.png)
+   - [Refer to step 2 here](https://github.com/Gowthami0901/HR-Recruiter-Bot/blob/main/adding-assets-to-system-user.png).
 3. Click `Generate new token`, select your app, and choose the duration for the access token—either 60 days or a never-expiring token.
 4. Grant all permissions, as selecting only WhatsApp permissions may lead to errors.
 5. Confirm and copy the newly generated access token.

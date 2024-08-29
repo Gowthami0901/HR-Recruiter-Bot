@@ -1,5 +1,4 @@
-# HR-Recruiter-Bot
-
+# WhatsApp API and BlandAI Call Integration Setup Guide
 
 ## Table of Contents
 
